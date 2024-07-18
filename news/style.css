@@ -1,0 +1,69 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styles */
+.navbar {
+    margin-bottom: 20px;
+}
+
+/* Card styles */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem; /* Rounded corners */
+}
+
+.card img {
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1); /* Slightly zoom the image on hover */
+}
+
+.card-body {
+    transition: background-color 0.3s ease;
+}
+
+.card:hover .card-body {
+    background-color: rgba(0, 0, 0, 0.5); /* Darken background on hover */
+    color: #fff; /* Change text color to white */
+}
+
+.card:hover {
+    transform: scale(1.05) translateY(-10px); /* Scale up and lift card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    opacity: 0.9; /* Slightly fade out the card */
+}
+
+/* Card content animation */
+.card-title {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card-btn {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animation on card reveal */
+.card:hover .card-title,
+.card:hover .card-text,
+.card:hover .card-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
